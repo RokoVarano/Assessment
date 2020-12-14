@@ -15,29 +15,21 @@ $spacer: 1rem;
 
 $font-size-mob: 14px;
 $font-size-tab: $font-size-mob * 1.2;
-$font-weight-base: 700;
 $font-family-base: 'Cocogoose', serif;
 $font-family-lato: 'Lato', sans-serif !default;
 
 //lintern would not allow to use bootstrap variables directly, so...
-$b-primary: #d3d3d3;
-$b-secondary: #272a31;
-$b-success: #ec5242;
-$b-info: #17a2b8;
-$b-warning: #ffc107;
-$b-danger: #dc3545;
-$b-light: #d3d3d3;
+$b-primary: #ec5242;
+$b-secondary: #d3d3d3;
 $b-dark: #272a31;
+$b-light: #e3e3e3;
 
+$b-breakpoint-sm: 576px;
 $b-breakpoint-md: 768px;
 
 $theme-colors: (
   "primary": $b-primary,
   "secondary": $b-secondary,
-  "success": $b-success,
-  "info": $b-info,
-  "warning": $b-warning,
-  "danger": $b-danger,
   "light": $b-light,
   "dark": $b-dark
 );
@@ -48,88 +40,129 @@ body {
 
   a {
     text-decoration: none;
-    color: $b-info;
+    color: $b-dark;
 
     &:hover {
       text-decoration: none;
     }
   }
-}
 
-h1 {
-  font-size: $font-size-mob * 1.5;
-  font-weight: $font-weight-base;
-  font-family: 'Cocogoose', serif;
-}
-
-h2 {
-  font-size: $font-size-mob * 1.4;
-  font-weight: $font-weight-base;
-  font-family: 'Cocogoose', serif;
-}
-
-h3 {
-  font-size: $font-size-mob * 1.3;
-  font-weight: $font-weight-base;
-  font-family: 'Cocogoose', serif;
-}
-
-h4 {
-  font-size: $font-size-mob * 1.2;
-  font-weight: $font-weight-base;
-  font-family: 'Cocogoose', serif;
-}
-
-h5 {
-  font-size: $font-size-mob * 1.1;
-  font-weight: $font-weight-base;
-  font-family: 'Cocogoose', serif;
-}
-
-h6 {
-  font-size: $font-size-mob * 1;
-  font-weight: $font-weight-base;
-  font-family: 'Cocogoose', serif;
-}
-
-p {
-  font-size: $font-size-mob * 1;
-  line-height: 1.1;
-  font-family: 'Lato', sans-serif;
-}
-
-//tablet-size
-@media (min-width: $b-breakpoint-md) {
-  body {
-    font-size: $font-size-tab;
+  %h-styles {
+    font-weight: 700;
+    font-family: 'Cocogoose', serif;
   }
 
   h1 {
-    font-size: $font-size-tab * 1.5;
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 2;
   }
 
   h2 {
-    font-size: $font-size-tab * 1.4;
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.8;
   }
 
   h3 {
-    font-size: $font-size-tab * 1.3;
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.6;
   }
 
   h4 {
-    font-size: $font-size-tab * 1.2;
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.4;
   }
 
   h5 {
-    font-size: $font-size-tab * 1.1;
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.2;
   }
 
   h6 {
-    font-size: $font-size-tab * 1;
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1;
   }
 
   p {
-    font-size: $font-size-tab * 1;
+    font-size: $font-size-mob * 1;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+}
+
+.uppercase {
+  text-transform: capitalize;
+}
+
+.lato {
+  font-family: $font-family-lato;
+}
+
+.dragon-bg {
+  background-image: url("assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 768px 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.fog {
+  background: linear-gradient(to bottom, rgba(241, 241, 241, 0.5), $b-light 40%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.spacer {
+  margin: 20%;
+  background: blue;
+}
+
+//tablet-size
+
+@media (min-width: $b-breakpoint-md) {
+  body {
+    font-size: $font-size-tab;
+
+    h1 {
+      font-size: $font-size-tab * 2;
+    }
+
+    h2 {
+      font-size: $font-size-tab * 1.8;
+    }
+
+    h3 {
+      font-size: $font-size-tab * 1.6;
+    }
+
+    h4 {
+      font-size: $font-size-tab * 1.4;
+    }
+
+    h5 {
+      font-size: $font-size-tab * 1.2;
+    }
+
+    h6 {
+      font-size: $font-size-tab * 1;
+    }
+
+    p {
+      font-size: $font-size-tab * 1;
+    }
   }
 }
 
