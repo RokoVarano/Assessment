@@ -7,21 +7,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="bg-light">
+  <div class="dragon-bg position-absolute d-none d-md-block"></div>
+  <div class="fog position-absolute d-none d-md-block"></div>
   <header>
   </header>
-  <main class="row">
-    <div class="top-section col-12 bg-light" style="z-index: -5;">
+  <main class="row m-md-auto">
+    <div class="top-section col-12">
       <div class='m-2 mb-0 pb-5'>
-        <div class="dragon-bg position-absolute"></div>
-        <div class="fog position-absolute"></div>
-        <!--mobile navbar. Should be a dropdown, but that's JS-->
+        <div class="dragon-bg position-absolute d-md-none"></div>
+        <div class="fog position-absolute d-md-none"></div>
         
+        <!--mobile navbar. Should be a dropdown, but that's JS-->
         <nav class='d-md-none d-flex justify-content-start pb-5'>
           <button class='btn btn-link text-dark' type='button'>
             <i class="fas fa-scroll fa-2x"></i>
           </button>
         </nav>
+
+        <div class="d-none d-md-flex spacer"> </div>
         
         <section>
           <h4 class="text-primary lato">"Adventurers gather forth!"</h4>
