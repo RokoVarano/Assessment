@@ -83,12 +83,14 @@ body {
     @extend %h-styles;
 
     font-size: $font-size-mob * 1.2;
+    font-family: $font-family-lato;
   }
 
   h6 {
     @extend %h-styles;
 
     font-size: $font-size-mob * 1;
+    font-family: $font-family-lato;
   }
 
   p {
@@ -105,10 +107,6 @@ body {
 
 .lato {
   font-family: $font-family-lato;
-}
-
-.w80 {
-  width: 80%;
 }
 
 %background-images {
@@ -168,17 +166,29 @@ body {
   background: blue;
 }
 
-.glow-primary {
-  transition: color($trans-time);
+.program-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 5px;
+}
 
-  &:hover {
-    color: $b-primary;
-  }
+.lion-bg {
+  @extend %background-images;
+
+  background-image: url("assets/lion.png");
+  background-size: contain;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 //tablet-size
 
 @media (min-width: $b-breakpoint-md) {
+  .w75 {
+    width: 75%;
+  }
+
   body {
     font-size: $font-size-tab;
 
@@ -206,10 +216,6 @@ body {
       font-size: $font-size-tab * 1;
     }
 
-    p {
-      font-size: $font-size-tab * 1;
-    }
-
     ul {
       list-style: none;
       display: flex;
@@ -227,7 +233,6 @@ body {
     }
 
     main {
-      width: 80%;
       margin-top: 75px;
     }
   }
@@ -246,6 +251,48 @@ body {
 
   .spacer {
     margin: 150px;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "program-title program-title program-title program-title program-title"
+      "dragon hat dice paint ring"
+      "program-link program-link program-link program-link program-link";
+
+    .program-title {
+      grid-area: program-title;
+    }
+
+    .dragon {
+      grid-area: dragon;
+      align-items: start;
+    }
+
+    .hat {
+      grid-area: hat;
+      align-items: start;
+    }
+
+    .dice {
+      grid-area: dice;
+      align-items: start;
+    }
+
+    .paint {
+      grid-area: paint;
+      align-items: start;
+    }
+
+    .ring {
+      grid-area: ring;
+      align-items: start;
+    }
+
+    .program-link {
+      grid-area: program-link;
+    }
   }
 }
 
