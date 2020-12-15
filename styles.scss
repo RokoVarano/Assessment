@@ -34,6 +34,8 @@ $theme-colors: (
   "dark": $b-dark
 );
 
+$trans-time: 0.5s;
+
 body {
   font-size: $font-size-mob;
   font-family: 'Lato', sans-serif;
@@ -117,6 +119,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -2;
 }
 
 .dragon-bg {
@@ -125,7 +128,22 @@ body {
   background-image: url("assets/background.jpg");
   background-position: right top;
   background-size: 768px 300px;
-  z-index: -2;
+}
+
+.beholder-bg {
+  @extend %background-images;
+
+  background-image: url("assets/beholder.jpg");
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.dark-bg {
+  @extend %background-images;
+
+  background-color: $b-dark;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 .fog {
@@ -148,6 +166,14 @@ body {
 .spacer {
   margin: 20%;
   background: blue;
+}
+
+.glow-primary {
+  transition: color($trans-time);
+
+  &:hover {
+    color: $b-primary;
+  }
 }
 
 //tablet-size
