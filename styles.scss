@@ -151,6 +151,14 @@ body {
   z-index: -1;
 }
 
+.fog-about {
+  @extend %background-images;
+
+  background-color: $b-light;
+  opacity: 0.8;
+  z-index: -2;
+}
+
 .treasure {
   @extend %background-images;
 
