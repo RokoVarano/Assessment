@@ -151,10 +151,44 @@ body {
   z-index: -1;
 }
 
+.fog-about {
+  @extend %background-images;
+
+  background-color: $b-light;
+  opacity: 0.8;
+  z-index: -3;
+}
+
 .treasure {
   @extend %background-images;
 
   background: url('assets/treasure.jpg');
+}
+
+.sponsor-bg-blizz {
+  @extend %background-images;
+
+  width: 300px;
+  background: url('assets/blizzcon-2020.jpg') no-repeat;
+  background-size: 300px auto;
+  z-index: -2;
+}
+
+.sponsor-bg-wolf {
+  @extend %background-images;
+
+  width: 300px;
+  background: url('assets/wod-latino.png') no-repeat;
+  background-size: 300px auto;
+  z-index: -2;
+}
+
+.red-fog {
+  @extend %background-images;
+
+  background-color: $b-primary;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 .translucid {
@@ -163,6 +197,11 @@ body {
 
 .spacer {
   margin: 20%;
+  background: blue;
+}
+
+.spacer-about {
+  margin: 5%;
   background: blue;
 }
 
@@ -180,6 +219,23 @@ body {
   background-size: contain;
   opacity: 0.1;
   z-index: -1;
+}
+
+.sponsor-holder {
+  width: 95%;
+  max-width: 300px;
+  height: 157px;
+  border: 1px solid $b-secondary;
+}
+
+.big-container {
+  background: $b-light;
+  z-index: -3;
+}
+
+.bot-bar-about {
+  background-color: $b-secondary;
+  color: $b-dark;
 }
 
 //tablet-size
@@ -251,6 +307,11 @@ body {
 
   .spacer {
     margin: 150px;
+  }
+
+  .bot-bar-about {
+    background-color: $b-dark;
+    color: $b-secondary;
   }
 
   .program-grid {
