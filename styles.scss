@@ -157,24 +157,6 @@ body {
   background: url('assets/treasure.jpg');
 }
 
-.sponsor-bg-blizz {
-  @extend %background-images;
-
-  width: 300px;
-  background: url('assets/blizzcon-2020.jpg') no-repeat;
-  background-size: 300px auto;
-  z-index: -2;
-}
-
-.sponsor-bg-wolf {
-  @extend %background-images;
-
-  width: 300px;
-  background: url('assets/wod-latino.png') no-repeat;
-  background-size: 300px auto;
-  z-index: -2;
-}
-
 .translucid {
   opacity: 0.7;
 }
@@ -210,8 +192,8 @@ body {
 }
 
 .big-container {
-  background: $b-light;
-  z-index: -3;
+  background: transparent;
+  z-index: 0;
 }
 
 .bot-bar-about {
@@ -238,6 +220,53 @@ body {
   background-color: $b-primary;
   opacity: 0.8;
   z-index: -1;
+}
+
+.sponsor-bg-blizz {
+  @extend %background-images;
+
+  width: 300px;
+  background: url('assets/blizzcon-2020.jpg') no-repeat;
+  background-size: 300px auto;
+  z-index: -1;
+}
+
+.sponsor-bg-wolf {
+  @extend %background-images;
+
+  width: 300px;
+  background: url('assets/wod-latino.png') no-repeat;
+  background-size: 300px auto;
+  z-index: -1;
+}
+
+//Tickets classes
+
+.lion-bg-tickets {
+  @extend %background-images;
+
+  background-image: url("assets/lion.png");
+  background-position: bottom right;
+  background-size: auto 500px;
+  top: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.ticket-step {
+  display: flex;
+  flex-flow: column;
+  border: $b-dark solid 1px;
+}
+
+.w150px {
+  width: 150px;
+}
+
+.check-day {
+  width: 30px;
+  height: 30px;
+  z-index: 100;
 }
 
 //tablet-size
@@ -358,6 +387,49 @@ body {
   .bot-bar-about {
     background-color: $b-dark;
     color: $b-secondary;
+  }
+
+  //Tickets classes
+
+  .lion-bg-tickets {
+    top: 10%;
+  }
+
+  .ticket-step {
+    flex-flow: row;
+    border-radius: 100px;
+  }
+
+  .ticket-grid-bg {
+    background: url('assets/red-white-blue.jpg');
+    background-size: 200px 200px;
+  }
+
+  .ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    background: white;
+  }
+
+  .cell {
+    border: $b-secondary 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-lato;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .top-cell {
+    background: $b-light;
+  }
+
+  .extend-cell {
+    grid-column-start: 3;
+    grid-column-end: 5;
   }
 }
 

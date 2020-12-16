@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test env</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="bg-light">
+  <div class="lion-bg-tickets position-fixed"></div>
+
+  <header class="border-bottom border-primary d-none d-md-block">
+    <div class="treasure position-absolute d-none d-md-block"> </div>
+    <nav class="bg-dark translucid ">
+      <ul class='d-flex justify-content-end w75 p-0 my-0 mx-auto lato'>
+        <li><a href='#' class="text-secondary"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href='#' class="text-secondary"><i class="fab fa-twitter"></i></a></li>
+        <li><a href='#' class="text-secondary">Spanish</a></li>
+      </ul>      
+    </nav>
+    <nav class="navbar bg-white p-0 translucid border">
+      <div class="d-flex justify-content-between w75 p-0 my-0 mx-auto lato">
+        <a href="#" class="navbar-brand">
+          <img src="assets/wizards-logo.png" style="width: auto; height: 50px;" alt="wizards logo">
+        </a>
+        <ul>
+          <li><a href='#'>Tickets</a></li>
+          <li><a href='#'>About</a></li>
+        </ul>
+      </div> 
+    </nav>
+  </header>
+
+  <main class="row m-md-auto">
+    <div class="top-section col-12">
+      <div class='m-2 mb-0 pb-5'>        
+        <!--mobile navbar. Should be a dropdown, but that's JS-->
+        <nav class='d-md-none d-flex justify-content-start'>
+          <button class='btn btn-link text-dark bg-secondary translucid' type='button' style="border-radius: 50%;">
+            <i class="fas fa-scroll fa-2x"></i>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="big-container">
+      <section class="w-75 w-md-50 mx-auto d-flex flex-column justify-content-center d-md-flex">
+        <h4 class="lato text-center">Select Tickets</h4>
+
+        <div class="ticket-step p-3 d-md-flex flex-shrink-1 mx-md-auto my-3">
+          <p class="text-primary mx-md-2 text-center my-0">&#8226; STEP 1</p>
+          <p class="text-dark d-none d-md-block mx-2 my-0">Please select the day when you want to join PanAmerican Fantasy Convention 2021</p>
+          <p class="text-dark text-center d-block d-md-none m-0">Please Select Day of Assistance</p>
+        </div>
+
+        <div class="ticket-grid-bg my-3 d-none d-md-block">
+          <div class="ticket-grid m-2">
+            <div class="cell top-cell">Ticket</div>
+            <div class="cell top-cell">1-Day Ticket</div>
+            <div class="cell top-cell extend-cell">2-Day-Ticket</div>
+            <div class="cell top-cell">Partners and Invitations</div>
+
+            <div class="cell">Date</div>
+            <div class="cell">Jan-16</div>
+            <div class="cell">Jan-17</div>
+            <div class="cell">Jan-16 + Jan 17</div>
+            <div class="cell">Jan-16 + Jan 17</div>
+
+            <div class="cell">Normal</div>
+            <div class="cell">
+              <h6 class="lato text-primary">$50</h6>
+              <input type="radio" id="Jan-16" value="Jan-16" name="ticket">
+            </div>
+            <div class="cell">
+              <h6 class="lato text-primary">$70</h6>
+              <input type="radio" id="Jan-17" value="Jan-17" name="ticket">
+            </div>
+            <div class="cell">
+              <h6 class="lato text-primary">$100</h6>
+              <input type="radio" id="Jan-16-17" value="Jan-16-17" name="ticket">
+            </div>
+            <div class="cell">
+              <h6 class="lato text-primary">$0</h6>
+              <input type="radio" id="Invite" value="Invite" name="ticket">
+            </div>
+
+            <div class="cell">VIP</div>
+            <div class="cell">
+              <h6 class="lato text-primary">$70</h6>
+              <input type="radio" id="Jan-16-vip" value="Jan-16-vip" name="ticket">
+            </div>
+            <div class="cell">
+              <h6 class="lato text-primary">$85</h6>
+              <input type="radio" id="Jan-17-vip" value="Jan-17-vip" name="ticket">
+            </div>
+            <div class="cell">
+              <h6 class="lato text-primary">$140</h6>
+              <input type="radio" id="Jan-16-17-vip" value="Jan-16-17-vip" name="ticket">
+            </div>
+            <div class="cell">
+              <h6 class="lato text-primary">$0</h6>
+              <input type="radio" id="Invite-vip" value="Invite-vip" name="ticket">
+            </div>
+          </div>
+        </div>
+
+        <form class="d-md-none container-fluid">
+          <h3 class="lato text-primary text-center">$XX</h3>
+          <div class="row">
+            <h2 class="col-6 d-flex align-items-center">
+              <label class="lato mx-4">Jan-16</label>
+            </h2>
+            <input type="checkbox" class="check-day col-6 my-4">
+            <h2 class="col-6 d-flex align-items-center">
+              <label class="lato mx-4">Jan-17</label>
+            </h2>
+            <input type="checkbox" class="check-day col-6 my-4">            
+            <h2 class="col-6 d-flex align-items-center">
+              <label class="lato mx-4">VIP</label>
+            </h2>
+            <input type="checkbox" class="check-day col-6 my-4">
+          </div>
+        </form>
+      </section>
+
+      <section class="mx-auto border-top border-primary py-5">
+        <h4 class="lato text-center">Select Your Lunch</h4>
+        <div class="d-flex flex-column border border-secondary w-75 mx-auto my-3">
+          <div class="d-flex bg-light justify-content-center">
+            <h5 class="lato">January 16</h5>
+          </div>
+          <div class="d-flex bg-white align-items-center justify-content-around">
+            <div>
+              <label class="lato mx-4">menu 1</label>
+              <input type="radio" id="menu1-1-16" value="menu-1" name="menu-16">
+            </div>
+            <div>
+              <label class="lato mx-4">menu 2</label>
+              <input type="radio" id="menu1-2-16" value="menu-2" name="menu-16">
+            </div>
+            <div>
+              <label class="lato mx-4">menu 3</label>
+              <input type="radio" id="menu1-3-16" value="menu-3" name="menu-16">
+            </div>
+            <div>
+              <label class="lato mx-4">menu 4</label>
+              <input type="radio" id="menu1-4-16" value="menu-4" name="menu-16">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column border border-secondary w-75 mx-auto my-3">
+          <div class="d-flex bg-light justify-content-center">
+            <h5 class="lato">January 16</h5>
+          </div>
+          <div class="d-flex bg-white align-items-center justify-content-around">
+            <div>
+              <label class="lato mx-4">menu 1</label>
+              <input type="radio" id="menu1-1-17" value="menu-1" name="menu-17">
+            </div>
+            <div>
+              <label class="lato mx-4">menu 2</label>
+              <input type="radio" id="menu1-2-17" value="menu-2" name="menu-17">
+            </div>
+            <div>
+              <label class="lato mx-4">menu 3</label>
+              <input type="radio" id="menu1-3-17" value="menu-3" name="menu-17">
+            </div>
+            <div>
+              <label class="lato mx-4">menu 4</label>
+              <input type="radio" id="menu1-4-17" value="menu-4" name="menu-17">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary py-3 px-5 my-4 text-secondary">PURCHASE</button>
+        </div>
+
+      </section>
+    </div>
+</main>
+
+</body>
+</html>
