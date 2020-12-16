@@ -389,6 +389,37 @@ body {
     flex-flow: row;
     border-radius: 100px;
   }
+
+  .ticket-grid-bg {
+    background: url('assets/red-white-blue.jpg');
+    background-size: 200px 200px;
+  }
+
+  .ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .cell {
+    border: $b-secondary 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-lato;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .top-cell {
+    background: $b-light;
+  }
+
+  .extend-cell {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";
