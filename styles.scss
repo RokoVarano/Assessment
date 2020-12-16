@@ -151,14 +151,6 @@ body {
   z-index: -1;
 }
 
-.fog-about {
-  @extend %background-images;
-
-  background-color: $b-light;
-  opacity: 0.8;
-  z-index: -3;
-}
-
 .treasure {
   @extend %background-images;
 
@@ -183,25 +175,12 @@ body {
   z-index: -2;
 }
 
-.red-fog {
-  @extend %background-images;
-
-  background-color: $b-primary;
-  opacity: 0.8;
-  z-index: -1;
-}
-
 .translucid {
   opacity: 0.7;
 }
 
 .spacer {
   margin: 20%;
-  background: blue;
-}
-
-.spacer-about {
-  margin: 5%;
   background: blue;
 }
 
@@ -221,6 +200,8 @@ body {
   z-index: -1;
 }
 
+//About classes
+
 .sponsor-holder {
   width: 95%;
   max-width: 300px;
@@ -236,6 +217,27 @@ body {
 .bot-bar-about {
   background-color: $b-secondary;
   color: $b-dark;
+}
+
+.spacer-about {
+  margin: 5%;
+  background: blue;
+}
+
+.fog-about {
+  @extend %background-images;
+
+  background-color: $b-light;
+  opacity: 0.8;
+  z-index: -3;
+}
+
+.red-fog {
+  @extend %background-images;
+
+  background-color: $b-primary;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 //tablet-size
@@ -309,11 +311,6 @@ body {
     margin: 150px;
   }
 
-  .bot-bar-about {
-    background-color: $b-dark;
-    color: $b-secondary;
-  }
-
   .program-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
@@ -355,8 +352,13 @@ body {
       grid-area: program-link;
     }
   }
-}
 
-//non-general classes here
+  //About Classes
+
+  .bot-bar-about {
+    background-color: $b-dark;
+    color: $b-secondary;
+  }
+}
 
 @import "node_modules/bootstrap/scss/bootstrap";
