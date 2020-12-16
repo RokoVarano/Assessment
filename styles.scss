@@ -233,6 +233,11 @@ body {
   z-index: -3;
 }
 
+.bot-bar-about {
+  background-color: $b-secondary;
+  color: $b-dark;
+}
+
 //tablet-size
 
 @media (min-width: $b-breakpoint-md) {
@@ -302,6 +307,11 @@ body {
 
   .spacer {
     margin: 150px;
+  }
+
+  .bot-bar-about {
+    background-color: $b-dark;
+    color: $b-secondary;
   }
 
   .program-grid {
