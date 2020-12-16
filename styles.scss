@@ -269,6 +269,12 @@ body {
   z-index: 100;
 }
 
+.mob-ticket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
 //tablet-size
 
 @media (min-width: $b-breakpoint-md) {
