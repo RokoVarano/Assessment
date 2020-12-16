@@ -165,6 +165,32 @@ body {
   background: url('assets/treasure.jpg');
 }
 
+.sponsor-bg-blizz {
+  @extend %background-images;
+
+  width: 300px;
+  background: url('assets/blizzcon-2020.jpg') no-repeat;
+  background-size: 300px auto;
+  z-index: -2;
+}
+
+.sponsor-bg-wolf {
+  @extend %background-images;
+
+  width: 300px;
+  background: url('assets/wod-latino.png') no-repeat;
+  background-size: 300px auto;
+  z-index: -2;
+}
+
+.red-fog {
+  @extend %background-images;
+
+  background-color: $b-primary;
+  opacity: 0.8;
+  z-index: -1;
+}
+
 .translucid {
   opacity: 0.7;
 }
@@ -198,7 +224,13 @@ body {
 .sponsor-holder {
   width: 95%;
   max-width: 300px;
+  height: 157px;
   border: 1px solid $b-secondary;
+}
+
+.big-container {
+  background: $b-light;
+  z-index: -3;
 }
 
 //tablet-size
