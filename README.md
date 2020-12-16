@@ -3,6 +3,7 @@
 # Project Name
 
 > This project is a personal take on the Creative Commons template for Conferences, in which the theme has been customized for a fictional Fantasy Convention. The project includes 3 pages, including "Main", "Tickets" and "About". Though the backgrounds and iconography have been severely altered, the main layout, fonts, and colors have been respected. 
+I thank the Creative Commons website for allowing me to use their template for this proyect.
 
 ![screenshot](./main-desktop.png)
 ![screenshot](./main-mobile.png)
