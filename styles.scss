@@ -275,6 +275,14 @@ body {
   grid-template-rows: auto;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: hsla(360, 100%, 100%, 0.75);
+  align-items: center;
+  justify-content: space-around;
+}
+
 //tablet-size
 
 @media (min-width: $b-breakpoint-md) {
@@ -436,6 +444,15 @@ body {
   .extend-cell {
     grid-column-start: 3;
     grid-column-end: 5;
+  }
+
+  .menu {
+    flex-direction: row;
+  }
+
+  .check-day {
+    width: 15px;
+    height: 15px;
   }
 }
 
