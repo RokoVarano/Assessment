@@ -24,6 +24,17 @@ Additional description about the project and its features.
 
 [Live Demo Link](https://rokovarano.github.io/Assessment/)
 
+## Getting Started
+
+For this project to be deployed, some libraries must be installed locally. In terminal, from the project's root directory:
+
+- npm install bootstrap@next
+- npm install sass
+
+The project includes the latest SASS file and it's compilation. However, if the CSS is to be updated it can be compiled with the following command:
+
+- sass styles.scss styles.css
+
 👤 **Author**
 
 - GitHub: [@githubhandle](https://github.com/RokoVarano/Assessment)
