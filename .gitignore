@@ -4,10 +4,6 @@
 *.scss.map
 node_modules
 
-.hintrc
-
-.stylelintrc.json
-
 test.html
 
 .vscode/
