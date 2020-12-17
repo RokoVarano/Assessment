@@ -101,7 +101,8 @@ body footer .footer-bottom-logo {
   font-family: "Lato", sans-serif;
 }
 
-.dragon-bg, .beholder-bg, .dark-bg, .fog, .treasure, .lion-bg, .fog-about, .red-fog, .sponsor-bg-blizz, .sponsor-bg-wolf, .lion-bg-tickets {
+.dragon-bg, .beholder-bg, .program-item-bg, .fog, .treasure, .lion-bg, .fog-about, .red-fog, .sponsor-bg-blizz, .sponsor-bg-wolf, .lion-bg-tickets {
+  position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -124,7 +125,7 @@ body footer .footer-bottom-logo {
   z-index: -1;
 }
 
-.dark-bg {
+.program-item-bg {
   background-color: #272a31;
   opacity: 0.4;
   z-index: -1;
@@ -189,7 +190,7 @@ body footer .footer-bottom-logo {
 .fog-about {
   background-color: #e3e3e3;
   opacity: 0.8;
-  z-index: -3;
+  z-index: -2;
 }
 
 .red-fog {
