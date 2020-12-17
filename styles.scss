@@ -150,6 +150,7 @@ body {
 }
 
 %background-images {
+  position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -176,7 +177,7 @@ body {
   z-index: -1;
 }
 
-.dark-bg {
+.program-item-bg {
   @extend %background-images;
 
   background-color: $b-dark;
@@ -219,7 +220,7 @@ body {
   background-image: url("assets/lion.png");
   background-size: contain;
   opacity: 0.1;
-  z-index: -1;
+  z-index: 0;
 }
 
 .speaker-portrait {
@@ -230,8 +231,9 @@ body {
 //About classes
 
 .big-container {
-  background: transparent;
+  background: $b-;
   z-index: 0;
+  position: relative;
 }
 
 .bot-bar-about {
@@ -249,7 +251,7 @@ body {
 
   background-color: $b-light;
   opacity: 0.8;
-  z-index: -3;
+  z-index: -2;
 }
 
 .red-fog {
