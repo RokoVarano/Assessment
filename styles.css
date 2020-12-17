@@ -83,6 +83,16 @@ body main .sponsor-pic {
   height: 125px;
 }
 
+body footer .footer-logo {
+  width: auto;
+  height: 75px;
+}
+
+body footer .footer-bottom-logo {
+  width: auto;
+  height: 90px;
+}
+
 .uppercase {
   text-transform: capitalize;
 }
