@@ -57,6 +57,42 @@ body p {
   font-weight: 400;
 }
 
+body main .border-radius-50 {
+  border-radius: 50%;
+}
+
+body main .program-link {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+body main .speaker-more {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body main .sponsor-holder {
+  width: 95%;
+  max-width: 300px;
+  height: 157px;
+  border: 1px solid #d3d3d3;
+}
+
+body main .sponsor-pic {
+  width: auto;
+  height: 125px;
+}
+
+body footer .footer-logo {
+  width: auto;
+  height: 75px;
+}
+
+body footer .footer-bottom-logo {
+  width: auto;
+  height: 90px;
+}
+
 .uppercase {
   text-transform: capitalize;
 }
@@ -130,11 +166,9 @@ body p {
   z-index: -1;
 }
 
-.sponsor-holder {
-  width: 95%;
-  max-width: 300px;
-  height: 157px;
-  border: 1px solid #d3d3d3;
+.speaker-portrait {
+  height: 90px;
+  width: 90px;
 }
 
 .big-container {
@@ -278,6 +312,10 @@ body p {
   }
   body main {
     margin-top: 75px;
+  }
+  .nav-logo {
+    width: auto;
+    height: 50px;
   }
   .dragon-bg {
     background-position: center;
