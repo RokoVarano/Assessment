@@ -220,7 +220,7 @@ body {
   background-image: url("assets/lion.png");
   background-size: contain;
   opacity: 0.1;
-  z-index: -1;
+  z-index: 0;
 }
 
 .speaker-portrait {
@@ -231,8 +231,9 @@ body {
 //About classes
 
 .big-container {
-  background: transparent;
+  background: $b-;
   z-index: 0;
+  position: relative;
 }
 
 .bot-bar-about {
