@@ -4,14 +4,6 @@
 *.scss.map
 node_modules
 
-.hintrc
-
-.stylelintrc.json
-
-package-lock.json
-
 test.html
-
-.github/
 
 .vscode/

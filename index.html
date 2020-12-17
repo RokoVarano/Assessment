@@ -1,25 +1,208 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test env</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-<body>
-  <header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test env</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="bg-light">
+  <div class="dragon-bg d-none d-md-block"></div>
+  <div class="fog d-none d-md-block"></div>
+  <header class="border-bottom border-primary d-none d-md-block">
+    <div class="treasure d-none d-md-block"> </div>
+    <nav class="bg-dark translucid ">
+      <ul class='d-flex justify-content-end w75 p-0 my-0 mx-auto lato'>
+        <li><a href='#' class="text-secondary"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href='#' class="text-secondary"><i class="fab fa-twitter"></i></a></li>
+        <li><a href='#' class="text-secondary">Spanish</a></li>
+      </ul>      
+    </nav>
+    <nav class="navbar bg-white p-0 translucid border">
+      <div class="d-flex justify-content-between w75 p-0 my-0 mx-auto lato">
+        <a href="#" class="navbar-brand">
+          <img src="assets/wizards-logo.png" alt="wizards logo" class="nav-logo">
+        </a>
+        <ul>
+          <li><a href='./tickets.html'>Tickets</a></li>
+          <li><a href='./about.html'>About</a></li>
+        </ul>
+      </div> 
+    </nav>
   </header>
 
-  <main class="container">
-    <div class="row">
-      <div class='col-12'>
+  <main class="row m-md-auto">
+    <div class="top-section col-12">
+      <div class='m-2 mb-0 pb-5'>
+        <div class="dragon-bg d-md-none"></div>
+        <div class="fog d-md-none"></div>
+        
+        <!--mobile navbar. Should be a dropdown, but that's JS-->
+        <nav class='d-md-none d-flex justify-content-start pb-5'>
+          <button class='btn btn-link text-dark bg-secondary translucid  border-radius-50' type='button' id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-scroll fa-2x"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="index.html">Home</a>
+            <a class="dropdown-item" href="tickets.html">Tickets</a>
+            <a class="dropdown-item" href="about.html">About</a>
+          </div>
+        </nav>
 
-     </div>
+        <div class="d-none d-md-flex spacer"> </div>
+        
+        <section class="w75 mx-auto">
+          <h4 class="text-primary lato">"Adventurers gather forth!"</h4>
+          <h1 class='uppercase text-primary'>panAmerican fantasy convention 2021</h1>
+          <p class='p-3 bg-light border border-white my-3'>An epic gathering to celebrate fantasy in music, games, art and fellowship. Meet other heroes from all over America and the World in Santiago, Chile.</p>
+          <h3 >2021.01.16(SAT) - 17(SUN)</h3>
+          <p>Estacion Mapocho (Mapocho Station), Santiago, Chile</p>
+        </section>
+      </div>
     </div>
-  </main>
+    
+    <section class="position-relative">
+      <div class="beholder-bg translucid"></div>
+      <div class="bg-dark"></div>
+      <div class="program-grid mx-3 mx-md-auto mt-3 w75">
+        <h2 class="text-secondary mx-auto lato p-3 program-title align-self-center">Adventure Plan</h2>
+        <article class="row position-relative p-3 dragon">
+          <div class="program-item-bg bg-dark translucid z-1"></div>
+          <div class="col-2 col-md-12 mb-md-2 text-secondary d-flex align-items-center justify-content-center"><i class="fas fa-dragon fa-2x"></i></div>
+          <div class="col-3 col-md-12 text-primary d-flex align-items-center justify-content-center text-center p-2"><h6>Concert</h6></div>
+          <div class="col-7 col-md-12 text-secondary d-flex"><p>Rhapsody of Fire opens with their epic Tales of the Emerald Sword</p></div>
+        </article>
+        <article class="row position-relative p-3 hat">
+          <div class="program-item-bg translucid"></div>
+          <div class="col-2 col-md-12 mb-md-2 text-secondary d-flex align-items-center justify-content-center"><i class="fas fa-hat-wizard fa-2x"></i></div>
+          <div class="col-3 col-md-12 text-primary d-flex align-items-center justify-content-center text-center p-2"><h6>Cosplay</h6></div>
+          <div class="col-7 col-md-12 text-secondary d-flex"><p>See your favorite characters on stage</p></div>
+        </article>
+        <article class="row position-relative p-3 dice">
+          <div class="program-item-bg translucid"></div>
+          <div class="col-2 col-md-12 mb-md-2 text-secondary d-flex align-items-center justify-content-center"><i class="fas fa-dice-d20 fa-2x"></i></div>
+          <div class="col-3 col-md-12 text-primary d-flex align-items-center justify-content-center text-center p-2"><h6>D&D Games</h6></div>
+          <div class="col-7 col-md-12 text-secondary d-flex"><p>The best Dungeon Masters await for legends to be created!</p></div>
+        </article>
+        <article class="row position-relative p-3 paint">
+          <div class="program-item-bg translucid"></div>
+          <div class="col-2 col-md-12 mb-md-2 text-secondary d-flex align-items-center justify-content-center"><i class="fas fa-paint-brush fa-2x"></i></div>
+          <div class="col-3 col-md-12 text-primary d-flex align-items-center justify-content-center text-center p-2"><h6>Art Gallery</h6></div>
+          <div class="col-7 col-md-12 text-secondary d-flex"><p>Inmortalized Heroes by the hands of proffesional illustrators</p></div>
+        </article>
+        <article class="row position-relative p-3 ring">
+          <div class="program-item-bg translucid"></div>
+          <div class="col-2 col-md-12 mb-md-2 text-secondary d-flex align-items-center justify-content-center"><i class="fas fa-ring fa-2x"></i></div>
+          <div class="col-3 col-md-12 text-primary d-flex align-items-center justify-content-center text-center p-2"><h6>Lord Of The Rings</h6></div>
+          <div class="col-7 col-md-12 text-secondary d-flex"><p>See the original artifacts wielded by the fellowship</p></div>
+        </article>
+        <button class="bg-primary text-secondary p-5 m-5 d-md-none">Join PanAmerican Fantasy Convention 2021</button>
+        <h6 class="align-self-center mx-auto program-link d-none d-md-block"><a href="#" class="text-secondary program-link">see the whole program</a></h6>
+      </div>
+    </section>
 
-  <footer>
+    <section class="position-relative">
+      <div class="lion-bg mt-5"></div>
+      <h2 class="text-dark mx-auto lato p-3 text-center">Champions Heed the Call</h2>
+      <div class="speakers mx-3 mx-md-auto mt-3 w75 row">
+        <div class="col-md-6 row position-relative">
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="assets/turilli.jpg" class="rounded-circle border border-primary p-2 speaker-portrait" alt="turilli">
+          </div>
+          <div class="col-8 p-2">
+            <h5>Lucca Turilli</h5>
+            <p class="text-primary font-italic mb-1">Founder, Composer and Guitarrist</p>
+            <p class="mb-1">Lucca has been composing epic metal symphonies for more than 20 years, and is here to recall and to present</p>
+          </div>
+        </div>
+        <div class="col-md-6 row position-relative">
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="assets/gimli.jpeg" class="rounded-circle border border-primary p-2 speaker-portrait" alt="turilli">
+          </div>
+          <div class="col-8 p-2">
+            <h5>John Rhys-Davies</h5>
+            <p class="text-primary font-italic mb-1">Actor, AKA Gimli, Son of Gloin</p>
+            <p class="mb-1">Meet the Axe of the Fellowship in the flesh as he speaks of his time in his most epic role</p>
+          </div>
+        </div>
+        <div class="col-md-6 row position-relative d-none d-md-flex">
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="assets/turilli.jpg" class="rounded-circle border border-primary p-2  speaker-portrait" alt="turilli">
+          </div>
+          <div class="col-8 p-2">
+            <h5>Lucca Turilli</h5>
+            <p class="text-primary font-italic mb-1">Founder, Composer and Guitarrist</p>
+            <p class="mb-1">Lucca has been composing epic metal symphonies for more than 20 years, and is here to recall and to present</p>
+          </div>
+        </div>
+        <div class="col-md-6 row position-relative d-none d-md-flex">
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="assets/gimli.jpeg" class="rounded-circle border border-primary p-2  speaker-portrait" alt="turilli">
+          </div>
+          <div class="col-8 p-2">
+            <h5>John Rhys-Davies</h5>
+            <p class="text-primary font-italic mb-1">Actor, AKA Gimli, Son of Gloin</p>
+            <p class="mb-1">Meet the Axe of the Fellowship in the flesh as he speaks of his time in his most epic role</p>
+          </div>
+        </div>
+        <div class="col-md-6 row position-relative d-none d-md-flex">
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="assets/turilli.jpg" class="rounded-circle border border-primary p-2  speaker-portrait" alt="turilli">
+          </div>
+          <div class="col-8 p-2">
+            <h5>Lucca Turilli</h5>
+            <p class="text-primary font-italic mb-1">Founder, Composer and Guitarrist</p>
+            <p class="mb-1">Lucca has been composing epic metal symphonies for more than 20 years, and is here to recall and to present</p>
+          </div>
+        </div>
+        <div class="col-md-6 row position-relative d-none d-md-flex">
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="assets/gimli.jpeg" class="rounded-circle border border-primary p-2  speaker-portrait" alt="turilli">
+          </div>
+          <div class="col-8 p-2">
+            <h5>John Rhys-Davies</h5>
+            <p class="text-primary font-italic mb-1">Actor, AKA Gimli, Son of Gloin</p>
+            <p class="mb-1">Meet the Axe of the Fellowship in the flesh as he speaks of his time in his most epic role</p>
+          </div>
+        </div>
+        <div class="d-flex d-md-none border border-dark justify-content-center">
+          <button class='btn btn-link text-dark lato speaker-more' type='button'>more</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <footer class="d-none d-md-flex flex-column">
+    <div class="bg-dark d-flex flex-column">
+      <div class="p-3 pb-0">
+        <h5 class="lato text-secondary text-center translucid p-3">Partner</h5>
+      </div>
+      <ul class="w75 d-flex justify-content-around mx-auto p-3 pt-0">
+        <li class="pb-3"><a href="#"><img class="footer-logo" src="assets/wizards-logo.png" alt="wizards"></a></li>
+        <li class="pb-3"><a href="#"><img class="footer-logo" src="assets/WhiteWolfLogo.png" alt="white-wolf"></a></li>
+        <li class="pb-3"><a href="#"><img class="footer-logo" src="assets/blizard.png" alt="blizzard"></a></li>
+        <li class="pb-3"><a href="#"><img class="footer-logo" src="assets/NZ.png" alt="NZ-Tourism"></a></li>
+      </ul>
+    </div>
+    <div class="bot-bar-about bg-light text-dark">
+      <div class="w-75 d-flex py-3 mx-auto justify-content-center">
+        <div class="sponsor-holder d-flex justify-content-center mx-2 border border-0">
+          <a href="#" class="my-3 d-flex align-items-center">
+            <img src="assets/wizards-logo.png" alt="wizards" class="py-auto footer-bottom-logo">
+          </a>
+        </div>
+        <p class="text-small my-auto mx-3">
+          I is not fat, i is fluffy making bread on the bathrobe sitting in a box
+        </p>
+      </div>
+    </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
 </body>
 </html>

@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+//bootstrap variables
+
+$grid-columns: 12;
+$grid-gutter-width: 0;
+$spacer: 1rem;
+
+//custom font variables
+
+@font-face {
+  font-family: 'Cocogoose';
+  src: url('./assets/fonts/Cocogoose_trial.otf') format('truetype');
+}
+
+$font-size-mob: 14px;
+$font-size-tab: $font-size-mob * 1.2;
+$font-family-base: 'Cocogoose', serif;
+$font-family-lato: 'Lato', sans-serif !default;
+
+//lintern would not allow to use bootstrap variables directly, so...
+$b-primary: #ec5242;
+$b-secondary: #d3d3d3;
+$b-dark: #272a31;
+$b-light: #e3e3e3;
+
+$b-breakpoint-sm: 576px;
+$b-breakpoint-md: 768px;
+
+$theme-colors: (
+  "primary": $b-primary,
+  "secondary": $b-secondary,
+  "light": $b-light,
+  "dark": $b-dark
+);
+
+$trans-time: 0.5s;
+
+body {
+  font-size: $font-size-mob;
+  font-family: 'Lato', sans-serif;
+
+  a {
+    text-decoration: none;
+    color: $b-dark;
+
+    &:hover {
+      text-decoration: none;
+      color: $b-primary;
+    }
+  }
+
+  %h-styles {
+    font-weight: 700;
+    font-family: 'Cocogoose', serif;
+  }
+
+  h1 {
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 2;
+  }
+
+  h2 {
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.8;
+  }
+
+  h3 {
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.6;
+  }
+
+  h4 {
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.4;
+  }
+
+  h5 {
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1.2;
+    font-family: $font-family-lato;
+  }
+
+  h6 {
+    @extend %h-styles;
+
+    font-size: $font-size-mob * 1;
+    font-family: $font-family-lato;
+  }
+
+  p {
+    font-size: $font-size-mob * 1;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+
+  main {
+    .border-radius-50 {
+      border-radius: 50%;
+    }
+
+    .program-link {
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+
+    .speaker-more {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .sponsor-holder {
+      width: 95%;
+      max-width: 300px;
+      height: 157px;
+      border: 1px solid $b-secondary;
+    }
+
+    .sponsor-pic {
+      width: auto;
+      height: 125px;
+    }
+  }
+
+  footer {
+    .footer-logo {
+      width: auto;
+      height: 75px;
+    }
+
+    .footer-bottom-logo {
+      width: auto;
+      height: 90px;
+    }
+  }
+}
+
+.uppercase {
+  text-transform: capitalize;
+}
+
+.lato {
+  font-family: $font-family-lato;
+}
+
+%background-images {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.dragon-bg {
+  @extend %background-images;
+
+  background-image: url("assets/background.jpg");
+  background-position: right top;
+  background-size: 768px 300px;
+}
+
+.beholder-bg {
+  @extend %background-images;
+
+  background-image: url("assets/beholder.jpg");
+}
+
+.program-item-bg {
+  @extend %background-images;
+
+  background-color: $b-dark;
+}
+
+.fog {
+  @extend %background-images;
+
+  background: linear-gradient(to bottom, rgba(241, 241, 241, 0), $b-light 40%);
+}
+
+.treasure {
+  @extend %background-images;
+
+  background: url('assets/treasure.jpg');
+}
+
+.translucid {
+  opacity: 0.7;
+}
+
+.spacer {
+  margin: 20%;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+.lion-bg {
+  @extend %background-images;
+
+  background-image: url("assets/lion.png");
+  background-size: contain;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.speaker-portrait {
+  height: 90px;
+  width: 90px;
+}
+
+//About classes
+
+.bot-bar-about {
+  background-color: $b-secondary;
+  color: $b-dark;
+}
+
+.spacer-about {
+  margin: 5%;
+  background: blue;
+}
+
+.fog-about {
+  @extend %background-images;
+
+  background-color: $b-light;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+.red-fog {
+  @extend %background-images;
+
+  background-color: $b-primary;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.sponsor-bg-blizz {
+  @extend %background-images;
+
+  width: 300px;
+  z-index: 1;
+  background: url('assets/blizzcon-2020.jpg') no-repeat;
+  background-size: 300px auto;
+}
+
+.sponsor-bg-wolf {
+  @extend %background-images;
+
+  width: 300px;
+  z-index: 1;
+  background: url('assets/wod-latino.png') no-repeat;
+  background-size: 300px auto;
+}
+
+//Tickets classes
+
+.lion-bg-tickets {
+  @extend %background-images;
+
+  background-image: url("assets/lion.png");
+  background-position: bottom right;
+  background-size: auto 500px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.ticket-step {
+  display: flex;
+  flex-flow: column;
+  border: $b-dark solid 1px;
+}
+
+.check-day {
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+}
+
+.mob-ticket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: hsla(360, 100%, 100%, 0.75);
+  align-items: center;
+  justify-content: space-around;
+}
+
+//tablet-size
+
+@media (min-width: $b-breakpoint-md) {
+  .w75 {
+    width: 75%;
+  }
+
+  body {
+    font-size: $font-size-tab;
+
+    h1 {
+      font-size: $font-size-tab * 2;
+    }
+
+    h2 {
+      font-size: $font-size-tab * 1.8;
+    }
+
+    h3 {
+      font-size: $font-size-tab * 1.6;
+    }
+
+    h4 {
+      font-size: $font-size-tab * 1.4;
+    }
+
+    h5 {
+      font-size: $font-size-tab * 1.2;
+    }
+
+    h6 {
+      font-size: $font-size-tab * 1;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      li {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    header {
+      position: sticky;
+    }
+
+    main {
+      margin-top: 75px;
+    }
+  }
+
+  .nav-logo {
+    width: auto;
+    height: 50px;
+  }
+
+  .dragon-bg {
+    background-position: center;
+    background-size: cover;
+    top: 75px;
+    z-index: -5;
+  }
+
+  .fog {
+    background: linear-gradient(to bottom, rgba(241, 241, 241, 0), $b-light 60%);
+    z-index: -4;
+  }
+
+  .spacer {
+    margin: 150px;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "program-title program-title program-title program-title program-title"
+      "dragon hat dice paint ring"
+      "program-link program-link program-link program-link program-link";
+
+    .program-title {
+      grid-area: program-title;
+    }
+
+    .dragon {
+      grid-area: dragon;
+      align-items: start;
+    }
+
+    .hat {
+      grid-area: hat;
+      align-items: start;
+    }
+
+    .dice {
+      grid-area: dice;
+      align-items: start;
+    }
+
+    .paint {
+      grid-area: paint;
+      align-items: start;
+    }
+
+    .ring {
+      grid-area: ring;
+      align-items: start;
+    }
+
+    .program-link {
+      grid-area: program-link;
+    }
+  }
+
+  //About Classes
+
+  .bot-bar-about {
+    background-color: $b-dark;
+    color: $b-secondary;
+  }
+
+  //Tickets classes
+
+  .lion-bg-tickets {
+    top: 10%;
+  }
+
+  .ticket-step {
+    flex-flow: row;
+    border-radius: 100px;
+  }
+
+  .ticket-grid-bg {
+    background: url('assets/red-white-blue.jpg');
+    background-size: 200px 200px;
+  }
+
+  .ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    background: white;
+  }
+
+  .cell {
+    border: $b-secondary 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-lato;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .top-cell {
+    background: $b-light;
+  }
+
+  .extend-cell {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .menu {
+    flex-direction: row;
+  }
+
+  .check-day {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
