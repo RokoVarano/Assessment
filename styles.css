@@ -279,6 +279,10 @@ body p {
   body main {
     margin-top: 75px;
   }
+  .nav-logo {
+    width: auto;
+    height: 50px;
+  }
   .dragon-bg {
     background-position: center;
     background-size: cover;
