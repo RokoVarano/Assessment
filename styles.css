@@ -71,6 +71,18 @@ body main .speaker-more {
   text-transform: uppercase;
 }
 
+body main .sponsor-holder {
+  width: 95%;
+  max-width: 300px;
+  height: 157px;
+  border: 1px solid #d3d3d3;
+}
+
+body main .sponsor-pic {
+  width: auto;
+  height: 125px;
+}
+
 .uppercase {
   text-transform: capitalize;
 }
@@ -147,13 +159,6 @@ body main .speaker-more {
 .speaker-portrait {
   height: 90px;
   width: 90px;
-}
-
-.sponsor-holder {
-  width: 95%;
-  max-width: 300px;
-  height: 157px;
-  border: 1px solid #d3d3d3;
 }
 
 .big-container {
